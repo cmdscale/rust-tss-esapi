@@ -189,7 +189,7 @@ impl Ticket for VerifiedTicket {
 impl_ticket_try_froms!(VerifiedTicket, TPMT_TK_VERIFIED);
 
 /// Rust native wrapper for `TPMT_TK_CREATION` objects.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct CreationTicket {
     tag: StructureTag,
     hierarchy: Hierarchy,
